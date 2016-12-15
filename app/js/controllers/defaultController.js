@@ -2,6 +2,7 @@ app.controller('defaultController', ['$rootScope', '$scope', '$http', '$state', 
 
   //vega widget start:Login Page00
 
+  $scope.account = {};
   $scope.account.username = 'rohit_ranade';
   $scope.account.password = 'rohit';
   function loadLoginPage() {
