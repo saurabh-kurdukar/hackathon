@@ -2,15 +2,14 @@ app.controller('defaultController', ['$rootScope', '$scope', '$http', '$state', 
 
   //vega widget start:Login Page00
 
-
+  $scope.account.username = 'rohit_ranade';
+  $scope.account.password = 'rohit';
   function loadLoginPage() {
     $scope.loginData = {};
     $scope.loginData.title = 'Login';
     $scope.loginData.request = {};
     $scope.loginData.login = {
       submit: function() {
-        $scope.account.username = 'rohit_ranade';
-        $scope.account.password = 'rohit';
 	  $scope.authMsg='';
         $http.post(
           baseUrl+'/users/auth', {
