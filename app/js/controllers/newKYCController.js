@@ -9,13 +9,13 @@ app.controller('newKYCController', ['$rootScope', '$scope', '$http', '$state', '
 			//vega widget end:File Style40
 			function init() {
 				$scope.kycFormData = {};
-				$scope.kycFormData.fname = '';
-				$scope.kycFormData.lname = '';
-				$scope.kycFormData.email = '';
-				$scope.kycFormData.phone = '';
-				$scope.kycFormData.score = '';
-				$scope.kycFormData.aadhar = '';
-				$scope.kycFormData.pancard = '';
+        $scope.kycFormData.fname = 'Nikhil';
+        $scope.kycFormData.lname = 'Joshi';
+        $scope.kycFormData.email = 'nikhil_joshi@abc.com';
+        $scope.kycFormData.phone = '022586417';
+        $scope.kycFormData.score = '100';
+        $scope.kycFormData.aadhar = '1562485296583259';
+        $scope.kycFormData.pancard = 'HKGY548N';
 				$scope.kycFormData.fingerPrint = '';
 				$scope.kycFormData.aadharFile = '';
 				$scope.kycFormData.pancardFile = '';

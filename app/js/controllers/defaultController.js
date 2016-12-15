@@ -9,6 +9,8 @@ app.controller('defaultController', ['$rootScope', '$scope', '$http', '$state', 
     $scope.loginData.request = {};
     $scope.loginData.login = {
       submit: function() {
+        $scope.account.username = 'rohit_ranade';
+        $scope.account.password = 'rohit';
 	  $scope.authMsg='';
         $http.post(
           baseUrl+'/users/auth', {
@@ -20,7 +22,7 @@ app.controller('defaultController', ['$rootScope', '$scope', '$http', '$state', 
               'Accept': 'application/json, text/plain, */*'
             }
           }).success(function(data, status, headers, config) {
-				 
+
           $window.localStorage.setItem('userDetails', JSON.stringify(data));
           // redirect user to default route
           $state.go('home');
