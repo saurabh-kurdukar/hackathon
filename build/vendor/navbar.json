@@ -1,0 +1,55 @@
+[{
+  "name": "E KYC",
+  "state": "default",
+  "navbarMenu": [{
+    "name": "home",
+    "state": "home"
+  }, {
+    "name": "page1",
+    "state": "page1"
+  }]
+}, {
+  "name": "Home",
+  "state": "home",
+  "navbarMenu": [{
+    "name": "home",
+    "state": "home"
+  }, {
+    "name": "page1",
+    "state": "page1"
+  }],
+  "page": 2
+}, {
+  "name": "New KYC",
+  "state": "newKYC",
+  "navbarMenu": [{
+    "name": "home",
+    "state": "home"
+  }, {
+    "name": "page1",
+    "state": "page1"
+  }],
+  "page": 3
+}, {
+  "name": "Update KYC",
+  "state": "updateKYC",
+  "navbarMenu": [{
+    "name": "home",
+    "state": "home"
+  }, {
+    "name": "page1",
+    "state": "page1"
+  }],
+  "page": 4
+},{
+  "name": "Verify KYC",
+  "state": "verify",
+  "navbarMenu": [{
+    "name": "home",
+    "state": "home"
+  }, {
+    "name": "page1",
+    "state": "page1"
+  }],
+  "page": 5
+}]

@@ -1,0 +1,1 @@
+var baseUrl="http://HJD22845:8085/v1.0";

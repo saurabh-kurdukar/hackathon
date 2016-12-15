@@ -1,0 +1,9 @@
+[{
+  "name": "Home",
+  "state": "home",
+  "logo": "fa fa-cloud"
+},{
+  "name": "Logout",
+  "state": "default",
+  "logo": "fa fa-cloud"
+}]

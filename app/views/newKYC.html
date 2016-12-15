@@ -1,0 +1,78 @@
+<div class='container-fluid'>
+
+<fieldset class=''>
+ <legend>Basic Information</legend>
+  <div class='row'>
+    <div class='col-xs-12'><label class="control-label">First Name</label><input type="text" class="form-control" ng-model="kycFormData.fname" ></input>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-xs-12'><label class="control-label">Last Name</label><input type="text" class="form-control" ng-model="kycFormData.lname" ></input>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-xs-12'><label class="control-label">Email</label><input type="email" class="form-control" ng-model="kycFormData.email" ></input>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-xs-8'><label class="control-label">Phone</label><input type="number" class="form-control" ng-model="kycFormData.phone" ></input>
+    </div>
+    <div class='col-xs-4'></div>
+  </div>
+  
+   <div class='row'>
+  <div class='col-xs-8'><label class="control-label">Credit Score</label><input type="text" class="form-control" ng-model="kycFormData.score" ></input>
+  </div>
+  <div class='col-xs-4'></div>
+</div>
+  </fieldset>
+ 
+  <fieldset class=''>
+ <legend>Documents</legend>
+  <div class='row mt'>
+    <div class='col-xs-4'><label class="control-label">Aadhar Card Number</label>
+	</div>
+    <div
+      class='col-xs-7'><input type="number" class="form-control" ng-model="kycFormData.aadhar" ></input>
+	</div>
+    </div>
+	<div class='row mt'>
+	  <div class='col-xs-4'><label class="control-label">
+	   Upload Aadhar Card</label></div>
+	  <!-- <div class='col-xs-7'> <input type="file" class="filestyle" data-icon="false" onchange="angular.element(this).scope().uploadFile(this,'aadharCard')"></div>
+    -->
+	<div class='col-xs-7'> <button ng-click="saveImage('aadharCard')" class="btn btn-info">Select Image</button></div>
+   
+   
+   </div>
+   
+   
+   <div class='row mt'>
+    <div class='col-xs-4'><label class="control-label">Pan Card Number</label>
+	</div>
+    <div
+      class='col-xs-7'><input type="text" class="form-control" ng-model="kycFormData.pancard"  ></input>
+	</div>
+    </div>
+	<div class='row mt'>
+	  <div class='col-xs-4'><label class="control-label">
+	   Upload Pan Card</label></div>
+	  <div class='col-xs-7'> <button ng-click="saveImage('pancard')" class="btn btn-info">Select Image</button></div>
+   </div>
+
+<div class='row mt'>
+  <div class='col-xs-4'><label class="control-label">Finger Print</label>
+</div>
+  <div class='col-xs-7'> <button ng-click="saveImage('fingerPrint')" class="btn btn-info">Scan FingerPrint</button></div>
+</div>
+ </fieldset>
+<div class='row'>
+  <div class='col-xs-3'></div>
+  <div class='col-xs-3'><button ng-click="addNewKYC()" class="btn btn-info">Submit</button></div>
+  <div class='col-xs-3'><button ng-click="cancelForm()" class="btn btn-info">Cancel</button></div>
+  <div class='col-xs-3'></div>
+</div>
+</div>
+<div class="loaderImageBG" style="position:fixed;bottom:50%;left:40%;height:64px;width:64px" ng-show="loadingVisible">
+		<img class="vmDetailLoaderImg" height="70px" width="70px" src="img/loader.gif">
+</div>

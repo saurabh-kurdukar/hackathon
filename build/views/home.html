@@ -1,0 +1,31 @@
+<div class='container-fluid'>
+  <div class='row userProfile'>
+    <div class='col-xs-3' style="margin-left:20px"><img ng-src="{{userDetails.profile}}" class="img-thumbnail img-circle" id="profileImg"></img>
+    </div>
+    <div class='col-xs-8'>
+      <h2>{{userDetails.name}}</h2>
+      <h5>{{userDetails.bank_name}}</h5>
+    </div>
+  </div>
+  <div class='row homeMenu' ui-sref="newKYC">
+    <div class='col-xs-1'></div>
+    <div class='col-xs-2'><img src="img/newKYC.png" class="menuLogo"></img>
+    </div>
+    <div class='col-xs-8'>
+      <h2 class="text-info">Add New KYC</h2><label class="control-label text-muted">Create new KYC record</label></div>
+  </div>
+  <div class='row homeMenu' ui-sref="verify">
+    <div class='col-xs-1'></div>
+    <div class='col-xs-2'><img src="img/update.png" class="menuLogo"></img>
+    </div>
+    <div class='col-xs-8'>
+      <h2 class="text-info">Verify KYC</h2><label class="control-label text-muted">Vefiy all your details and documents</label></div>
+  </div>
+  <div class='row homeMenu' ui-sref="updateKYC">
+    <div class='col-xs-1'></div>
+    <div class='col-xs-2'><img src="img/verify.png" class="menuLogo"></img>
+    </div>
+    <div class='col-xs-8'>
+      <h1 class="text-info">Update KYC</h1><label class="control-label text-muted">Update all your details and documents</label></div>
+  </div>
+</div>

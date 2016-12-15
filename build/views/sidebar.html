@@ -1,0 +1,37 @@
+<div class="col-sm-3 col-md-3 sidebar" ng-controller="sidebarController">
+        <div class="panel-heading static-filter">
+          <span class="panel-title_open">
+            <span style="font-size: 17px;">&nbsp;&nbsp;&nbsp;Navigation</span><img src="img/sidebar_menu.png" style="height: 25px;" class="pull-right" id="sidebar_menu_btn_on">
+          </span>
+		  <span class="panel-title_close" style="display:none">
+             <img src="img/sidebar_menu.png" style="height: 25px;" class="pull-right" id="sidebar_menu_btn_off">
+          </span>
+        </div>
+        <ul class="list-group allMenu">
+			<li class="list-group-item listSelection filter-category active-category" ui-sref="{{menu.state}}" ng-repeat="menu in allMenus">
+				<h4 style="cursor:pointer">
+				    <span>{{menu.name}}</span>
+				</h4>
+			</li>
+        </ul>
+    </div>
+
+<script>
+$("#sidebar_menu_btn_on").click(function(){
+ $(".sidebar").css("width","50px");
+ $("#mainView").css("margin-left","52px");
+ $(".panel-title_close").css("display","block");
+ $(".panel-title_open").css("display","none");
+ $(".sidebar .allMenu").css("display","none");
+ 
+});
+$("#sidebar_menu_btn_off").click(function(){
+ $(".sidebar").css("width","15%");
+ $("#mainView").css("margin-left","15%");
+ $(".panel-title_close").css("display","none");
+ $(".panel-title_open").css("display","block");
+ $(".sidebar .allMenu").css("display","block");
+});
+
+
+</script>	

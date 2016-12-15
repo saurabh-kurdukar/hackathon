@@ -1,0 +1,108 @@
+#mainView {
+  margin-top: 60px;
+  margin-left: 15%;
+  margin-bottom: 40px;
+}
+
+.sidebar {
+  background-color: #194457;
+  overflow-y: auto;
+  padding: 0px;
+  color: white;
+  position: fixed !important;
+  height: 100%;
+  width: 15%;
+  z-index: 1;
+  transition: 0.5s;
+  text-align: initial;
+  top: 53px;
+  z-index: 100;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  background-color: #727373;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: rgb(206, 209, 197);
+}
+
+.active-category {
+  background-color: transparent;
+  color: White;
+}
+
+.inactive-category {
+  background-color: #dfe3e4;
+  color: White;
+}
+
+.sidebar .list-group-item {
+  border: none;
+  border-radius: 0px
+}
+
+.sidebar .static-filter {
+  background: #ababab;
+  height: 45px;
+}
+
+@media screen and (max-width: 760px) {
+  #mainView {
+    margin-top: 55px;
+    margin-left: 0px;
+  }
+  .sidebar {
+    width: 0px;
+  }
+  #sidebar_menu_btn_on {
+    display: none;
+  }
+  .navbar .navigations{
+  display:none;
+  }
+}
+
+#appFooter footer {
+  height: 40px;
+  background-image: url(../img/footer_bg.png);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+#appFooter footer .menuItem {
+  width: 60px;
+  display: inline-block;
+}
+
+#appFooter footer .container {
+  padding-top: 12px;
+  margin: auto;
+  text-align: center;
+}
+
+.topnavbar-wrapper .navbar-default{
+    background-image: url(../img/header_bg.png);
+    border-bottom: 4px solid #db5565 !important;
+}
+
+.topnavbar-wrapper .navbarLogo{ 
+    height: 38px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.navigations{
+    float: left;
+    padding-top: 15px;
+    margin-left: 34px;
+	color:white;
+}
+.navigations .navigationMenuItem{
+width: 60px;
+float:left;
+}

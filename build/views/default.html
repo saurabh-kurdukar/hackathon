@@ -1,0 +1,33 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <div class="block-center loginPage ">
+        <!-- START panel-->
+        <div>
+          <div class="panel-heading text-center">
+              <img src="img/kyc_logo.png" alt="Image" class="block-center img-rounded" style="height:100px" />
+          </div>
+          <div>
+            <p class="text-center pv">Identify.Verify.Monitor</p>
+            <form role="form" ng-submit="loginData.login.submit()" name="loginData.login.loginForm" novalidate="" class="form-validate mb-lg">
+              <div class="form-group has-feedback">
+                <input id="exampleInputEmail1" type="text" name="account_email" placeholder="Enter email"  ng-model="account.username" required="" class="form-control" />
+                <span class="fa fa-envelope form-control-feedback text-muted"></span>
+                <span ng-show="loginData.login.loginForm.account_email.$dirty &amp;&amp; loginData.login.loginForm.account_email.$error.required" class="text-danger">This field is required</span>
+              </div>
+              <div class="form-group has-feedback">
+                <input id="exampleInputPassword1" type="password" name="account_password" placeholder="Password" ng-model="account.password" required="" class="form-control" />
+                <span class="fa fa-lock form-control-feedback text-muted"></span>
+                <span ng-show="loginData.login.loginForm.account_password.$dirty &amp;&amp; loginData.login.loginForm.account_password.$error.required" class="text-danger">This field is required</span>
+              </div>
+              <button type="submit" class="btn btn-block btn-primary mt-lg">Sign In</button>
+            </form>
+            <div ng-show="authMsg" class="alert alert-danger text-center">{{authMsg}}</div>
+          </div>
+        </div>
+        <!-- END panel-->
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+body{
+    background-image: url(/img/login_bg.png);
+    background-size: cover;
+
+}
+
+.userProfile{
+    background: #31558c;
+	color:white;
+}
+
+.homeMenu{
+background:white;
+border-bottom:1px solid #c1bebe;
+}
+
+.menuLogo{
+margin-top: 23px;
+    height: 45px;
+}
+#mainView .container-fluid{
+margin-bottom:60px;
+}
+
+.fingerPrintBox{
+border: 1px solid;
+    background: white;
+	    height: 172px;
+
+}
+
+#profileImg{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    height: 60px;
+    width: 60px;
+}
