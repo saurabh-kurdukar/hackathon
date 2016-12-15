@@ -19,14 +19,14 @@
     </div>
     <div class='col-xs-4'></div>
   </div>
-  
+
    <div class='row'>
-  <div class='col-xs-8'><label class="control-label">Credit Score</label><input type="text" class="form-control" ng-model="kycFormData.score" ></input>
+  <div class='col-xs-8'><label class="control-label">Credit Score</label><input type="number" class="form-control" ng-model="kycFormData.score" ></input>
   </div>
   <div class='col-xs-4'></div>
 </div>
   </fieldset>
- 
+
   <fieldset class=''>
  <legend>Documents</legend>
   <div class='row mt'>
@@ -42,11 +42,11 @@
 	  <!-- <div class='col-xs-7'> <input type="file" class="filestyle" data-icon="false" onchange="angular.element(this).scope().uploadFile(this,'aadharCard')"></div>
     -->
 	<div class='col-xs-7'> <button ng-click="saveImage('aadharCard')" class="btn btn-info">Select Image</button></div>
-   
-   
+
+
    </div>
-   
-   
+
+
    <div class='row mt'>
     <div class='col-xs-4'><label class="control-label">Pan Card Number</label>
 	</div>
