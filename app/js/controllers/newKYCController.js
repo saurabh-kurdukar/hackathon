@@ -118,6 +118,10 @@ app.controller('newKYCController', ['$rootScope', '$scope', '$http', '$state', '
 								// .then(function(result) {
 								// 	console.log(JSON.stringify(result));
 								// 	// $scope.loadingVisible=false;
+								// 	toastr.success("KYC Created Successfully!!!");
+								// 	$scope.loadingVisible=false;
+								// 	init();
+								// 	$state.go('home');
 								// })
 								// .catch(function(e) {
 								// 	console.log(e);

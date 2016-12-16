@@ -44,7 +44,7 @@ $scope.saveImage = function (type) {
 
 			function onCamSuccess(imageData) {
           alert("Image Uploaded Successfully");
-					$scope.fingerPrint = imageData;
+					$scope.uploadedFingerPrint = imageData;
 
 			};
 
@@ -64,8 +64,18 @@ $scope.verifyUser=function(){
   return;
  }
  else {
-   toastr.success("KYC verified!!!");
-   $state.go("home");
+   $scope.loadingVisible = true;
+   setTimeout(function() {
+     if($scope.fingerPrint === $scope.uploadedFingerPrint) {
+       $scope.loadingVisible = false;
+       toastr.success("KYC Verified Successfully!!!");
+       $state.go("home");
+     }
+     else {
+       $scope.loadingVisible = false;
+       toastr.error("KYC Verification Failed");
+     }
+   }, 2000);
  }
 };
 
