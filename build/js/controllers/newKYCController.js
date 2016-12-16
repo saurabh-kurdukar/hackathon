@@ -46,7 +46,7 @@ app.controller('newKYCController', ['$rootScope', '$scope', '$http', '$state', '
 
 			function onCamSuccess(imageData) {
 				// callPostApi(imageData);
-				alert(imageData);
+				alert("Image Uploaded Successfully");
 				if ($scope.type == 'pancard') {
 					$scope.kycFormData.pancardFile = imageData;
 				}
@@ -83,33 +83,48 @@ app.controller('newKYCController', ['$rootScope', '$scope', '$http', '$state', '
 						console.log(JSON.stringify(accounts));
 						var kyc = KycDetails.deployed();
 						$scope.loadingVisible=true;
-						kyc.createKycData(
-							accounts[l],
-							$scope.kycFormData.fname + ' ' + $scope.kycFormData.lname,
-							$scope.kycFormData.email,
-							$scope.kycFormData.phone,
-							$scope.kycFormData.aadhar,
-							$scope.kycFormData.pancard,
-							$scope.kycFormData.aadharFile,
-							$scope.kycFormData.pancardFile,
-							$scope.kycFormData.fingerPrint,
-							$scope.kycFormData.score,
-							{from: accounts[l]}
-						)
-						.then(function(result) {
-							console.log(JSON.stringify(result));
-							// $scope.loadingVisible=false;
-							var data = {
-								"aadhar_no": $scope.kycFormData.aadhar,
-								"account_no": accounts[l++]
+
+							var obj = {
+								"name": $scope.kycFormData.fname + ' ' + $scope.kycFormData.lname,
+					      "email": $scope.kycFormData.email,
+					      "phoneNo": $scope.kycFormData.phone,
+					      "aadharNo": $scope.kycFormData.aadhar,
+					      "panNo": $scope.kycFormData.pancard,
+					      "aadhar_file": $scope.kycFormData.aadharFile,
+					      "pan_file": $scope.kycFormData.pancardFile,
+					      "fingerprint": $scope.kycFormData.fingerPrint,
+					      "credit_score": $scope.kycFormData.score
 							};
-							console.log(JSON.stringify(data));
-							$http.post(baseUrl + '/accounts', data, {
+							$http.post(baseUrl + '/kyc', obj, {
 								headers : {
 									'Content-Type' : "application/json",
 									// 'access-token': $rootScope.accessToken
 								}
 							}).success(function (data) {
+
+								// kyc.createKycData(
+								// 	accounts[l],
+								// 	$scope.kycFormData.fname + ' ' + $scope.kycFormData.lname,
+								// 	$scope.kycFormData.email,
+								// 	$scope.kycFormData.phone,
+								// 	$scope.kycFormData.aadhar,
+								// 	$scope.kycFormData.pancard,
+								// 	$scope.kycFormData.aadharFile,
+								// 	$scope.kycFormData.pancardFile,
+								// 	$scope.kycFormData.fingerPrint,
+								// 	$scope.kycFormData.score,
+								// 	{from: accounts[l]}
+								// )
+								// .then(function(result) {
+								// 	console.log(JSON.stringify(result));
+								// 	// $scope.loadingVisible=false;
+								// })
+								// .catch(function(e) {
+								// 	console.log(e);
+								// });
+
+
+								console.log(JSON.stringify(data));
 								toastr.success("KYC Created Successfully!!!");
 								$scope.loadingVisible=false;
 								init();
@@ -118,10 +133,6 @@ app.controller('newKYCController', ['$rootScope', '$scope', '$http', '$state', '
 
 							$scope.loadingVisible=false;
 							});
-						})
-						.catch(function(e) {
-							console.log(e);
-						});
 			    });
 				// var fd = new FormData();
 				// fd.append("name", $scope.kycFormData.name);

@@ -10,18 +10,18 @@
     <div class='col-xs-8'><button ng-click="searchByAadhar()" class="btn btn-info">Search</button>
 	</div>
   </div>
-  
+
   <fieldset class='' ng-show="showDetails">
  <legend>Verify Information</legend>
   <div class='row'>
     <div class='col-xs-3'><label class="control-label">Aadhar Card</label></div>
-	 <div class='col-xs-6'><img src="img/aadhar.jpg" style="height:150px"></img>
+	 <div class='col-xs-6'><img src="data:image/png;base64,{{aadharFile}}" style="height:150px"></img>
     </div>
-	
+
   </div>
   <div class='row'>
     <div class='col-xs-3'><label class="control-label">Pan Card</label></div>
-	<div class='col-xs-6'><img src="img/pancard.jpg" style="height:150px"></img>
+	<div class='col-xs-6'><img src="data:image/png;base64,{{pancardFile}}" style="height:150px"></img>
     </div>
   </div>
   <div class='row'>
@@ -30,13 +30,13 @@
   <div class='row'>
     <div class='col-xs-6 fingerPrintBox'>
 	<span class="text-center">Existing Fingerprint</span>
-	<img src="img/fingerPrint.png" style="height:150px"></img>
+	<img src="data:image/png;base64,{{fingerPrint}}" style="height:150px"></img>
     </div>
     <div class='col-xs-6 fingerPrintBox'>
 	<div class="text-center">Verify</div>
 	<div style="margin-top: 40px;margin-left: 20px;">
 	<button ng-click="saveImage('fingerPrint')" class="btn btn-info">Scan FingerPrint</button>
-	
+
 	</div>
     </div>
   </div>

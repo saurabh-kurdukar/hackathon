@@ -18,7 +18,7 @@ module.exports = {
     "index.js": "index.js"
   },
   rpc: {
-    host: "vegaexpcreator.centralindia.cloudapp.azure.com",
-    port: 8082
+    host: "10.44.119.5",
+    port: 8545
   }
 };

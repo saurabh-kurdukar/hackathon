@@ -9,18 +9,21 @@ var kyc = KycDetails.deployed();
 
          $scope.loadingVisible = true;
 		$scope.showDetails=false;
- $http.get(baseUrl + '/accounts?aadhar_no=' + $scope.aadharNumber, {
+ $http.get(baseUrl + '/kyc?aadharNo=' + $scope.aadharNumber, {
                 headers: {
                    // 'access-token': $rootScope.accessToken
                 }
             }).success(function(data) {
                 console.log(JSON.stringify(data));
                 var account_number = data.account_no;
-                kyc.getKycDetails(account_number)
-                  .then(function(result) {
-                    console.log(JSON.stringify(result));
-                    console.log("Acc No", account_number);
-                  });
+                // kyc.getKycDetails(account_number)
+                //   .then(function(result) {
+                //     console.log(JSON.stringify(result));
+                //     console.log("Acc No", account_number);
+                //   });
+                $scope.aadharFile = data.aadhar_file;
+                $scope.pancardFile = data.pan_file;
+                $scope.fingerPrint = data.fingerprint;
                   $scope.showDetails=true;
                   $scope.loadingVisible = false;
             }).error(function(data) {
@@ -40,8 +43,8 @@ $scope.saveImage = function (type) {
 			};
 
 			function onCamSuccess(imageData) {
-
-					$scope.kycFormData.fingerPrint = imageData;
+          alert("Image Uploaded Successfully");
+					$scope.fingerPrint = imageData;
 
 			};
 
@@ -60,11 +63,10 @@ $scope.verifyUser=function(){
   alert("Select verified Checkbox");
   return;
  }
-
-
-
-
-
+ else {
+   toastr.success("KYC verified!!!");
+   $state.go("home");
+ }
 };
 
   //EOF
