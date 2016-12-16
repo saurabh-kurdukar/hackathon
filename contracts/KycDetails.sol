@@ -46,11 +46,9 @@ function addKycDetails() {
 
 
 function getKycDetails(address _account) constant
-    returns (string _name) {
-    if(bytes(kycs[_account].name).length != 0) {
-      var kycdetails = kycs[_account];
-      _name = kycdetails.name;
-    }
+    returns (uint name) {
+    _account = 0x5da9be430b5374267c16928a5aa3619964d6d795;
+    name = kycs[_account].credit_score;
   }
 
   function getData(address _account) constant returns (string  _email) {

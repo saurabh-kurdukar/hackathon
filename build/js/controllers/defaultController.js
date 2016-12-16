@@ -2,7 +2,9 @@ app.controller('defaultController', ['$rootScope', '$scope', '$http', '$state', 
 
   //vega widget start:Login Page00
 
-
+  $scope.account = {};
+  $scope.account.username = 'rohit_ranade';
+  $scope.account.password = 'rohit';
   function loadLoginPage() {
     $scope.loginData = {};
     $scope.loginData.title = 'Login';
@@ -20,7 +22,7 @@ app.controller('defaultController', ['$rootScope', '$scope', '$http', '$state', 
               'Accept': 'application/json, text/plain, */*'
             }
           }).success(function(data, status, headers, config) {
-				 
+
           $window.localStorage.setItem('userDetails', JSON.stringify(data));
           // redirect user to default route
           $state.go('home');
