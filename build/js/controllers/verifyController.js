@@ -64,18 +64,13 @@ $scope.verifyUser=function(){
   return;
  }
  else {
-   $scope.loadingVisible = true;
-   setTimeout(function() {
-     if($scope.fingerPrint === $scope.uploadedFingerPrint) {
-       $scope.loadingVisible = false;
-       toastr.success("KYC Verified Successfully!!!");
-       $state.go("home");
-     }
-     else {
-       $scope.loadingVisible = false;
-       toastr.error("KYC Verification Failed");
-     }
-   }, 2000);
+   if($scope.fingerPrint === $scope.uploadedFingerPrint) {
+     toastr.success("KYC Verified Successfully!!!");
+     $state.go("home");
+   }
+   else {
+     toastr.error("KYC Verification Failed");
+   }
  }
 };
 
